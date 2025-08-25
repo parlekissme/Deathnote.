@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Death Note Series</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: #0b0f19;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* Anime Info Section (Start) */
+    .anime-info {
+      background: #121826;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
+    }
+    .info-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      max-width: 1000px;
+      width: 100%;
+    }
+    .poster img {
+      width: 260px;
+      border-radius: 12px;
+      box-shadow: 0px 4px 12px rgba(0,0,0,0.7);
+    }
+    .details {
+      flex: 1;
+      min-width: 250px;
+    }
+    .details .title {
+      font-size: 2.2rem;
+      margin: 0;
+      color: crimson;
+    }
+    .details .meta {
+      color: #ccc;
+      margin: 5px 0 15px;
+    }
+    .tags span {
+      display: inline-block;
+      background: crimson;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 20px;
+      margin: 3px;
+      font-size: 0.85rem;
+    }
+    .desc {
+      margin-top: 15px;
+      line-height: 1.6;
+      color: #ddd;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .info-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .poster img {
+        width: 200px;
+      }
+    }
+
+    /* Header Banner */
+    .banner {
+      background: url("https://share.google/images/uc1H2w6L8mgNaVM7E") no-repeat center center/cover;
+      height: 50vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      box-shadow: inset 0 0 0 2000px rgba(0,0,0,0.5);
+    }
+    .banner h1 {
+      font-size: 3rem;
+      text-shadow: 2px 2px 10px black;
+    }
+    @media (max-width:600px) {
+      .banner h1 {
+        font-size: 1.8rem;
+      }
+    }
+
+    /* Episodes Section */
+    .episodes {
+      padding: 40px 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+    .card {
+      background: #121826;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0px 4px 12px rgba(0,0,0,0.6);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    .card img {
+      width: 465px;
+      height: 121px;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .card:hover img {
+      transform: scale(1.1);
+    }
+    .card h2 {
+      margin: 15px 0;
+      font-size: 1.2rem;
+    }
+    .watch-btn {
+      display: inline-block;
+      margin: 10px 0 20px;
+      padding: 10px 20px;
+      background: crimson;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: transform 0.2s ease, background 0.3s;
+    }
+    .watch-btn:hover {
+      background: darkred;
+      transform: scale(1.05);
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0px 6px 16px rgba(0,0,0,0.8);
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 40px;
+      background: #121826;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+    footer mark {
+      background: crimson;
+      color: white;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  
+  <!-- Anime Info Section -->
+  <section class="anime-info">
+    <div class="info-container">
+      <!-- Poster -->
+      <div class="poster">
+        <img src="deathnote-poster.jpg" alt="Death Note Poster">
+      </div>
+
+      <!-- Details -->
+      <div class="details">
+        <h1 class="title">Death Note</h1>
+        <p class="meta">2006 • 22m</p>
+        <p class="tags">
+          <span>Anime</span>
+          <span>Hindi Dub</span>
+          <span>Mystery</span>
+          <span>Psychological</span>
+          <span>Shounen</span>
+          <span>Supernatural</span>
+          <span>Suspense</span>
+        </p>
+        <p class="desc">
+          Light Yagami is an ace student with great prospects—and he's bored out of his mind.  
+          But all that changes when he finds the <b>Death Note</b>, a notebook dropped by a rogue Shinigami death god.  
+          Any human whose name is written in the notebook dies, and Light has vowed to use the power of the <b>Death Note</b>  
+          to rid the world of evil. But will Light succeed in his noble goal, or will the <b>Death Note</b>  
+          turn him into the very thing he fights against?
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Banner -->
+  <div class="banner">
+    <h1><span style="color:crimson;">DEATH NOTE</span> - All Episodes</h1>
+  </div>
+
+  <!-- Episodes -->
+  <section class="episodes" id="episodes">
+    <!-- Episode 1 -->
+    <div class="card">
+      <img src="episode1.jpg" alt="Episode 1">
+      <h2>Episode 1 - Rebirth</h2>
+      <a href="episode1.html" class="watch-btn">▶ Watch Now</a>
+    </div>
+
+    <!-- Episode 2 -->
+    <div class="card">
+      <img src="episode2.jpg" alt="Episode 2">
+      <h2>Episode 2 - Confrontation</h2>
+      <a href="episode2.html" class="watch-btn">▶ Watch Now</a>
+    </div>
+  </section>
+
+  <!-- JS Effect -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const cards = document.querySelectorAll('.card');
+      cards.forEach((card, index) => {
+        setTimeout(() => {
+          card.style.opacity = "1";
+          card.style.transform = "translateY(0)";
+        }, index * 300);
+      });
+    });
+  </script>
+
+  <!-- Footer -->
+  <footer>
+    <p><b>Thank You for Visiting!</b></p>
+    <p><i>Created by: <mark>mahesh.budelya</mark></i></p>
+  </footer>
+
+</body>
+</html>
